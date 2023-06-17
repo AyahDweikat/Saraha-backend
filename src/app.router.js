@@ -1,4 +1,4 @@
-import connectDB from '../DB/connection.js'
+
 import AuthRouter from '../src/Modules/Auth/auth.router.js'
 import UserRouter from '../src/Modules/User/user.router.js'
 
@@ -7,7 +7,6 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 const initApp = (app,express)=>{
-    connectDB()
     app.use(express.json())
     app.get('/',(req, res)=>{
         return res.status(200).json({message:"success connecting!"})
