@@ -21,7 +21,6 @@ function fileUpload(){
             cb('invalid format', false);
         }
     }
-    
     const upload = multer({fileFilter,storage})
     return upload;
 }
