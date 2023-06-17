@@ -1,5 +1,5 @@
-import { Types } from "mongoose";
-import {Schema, model} from mongoose;
+import mongoose, { Schema, Types, model } from "mongoose";
+
 
 
 const messageSchema = new Schema({

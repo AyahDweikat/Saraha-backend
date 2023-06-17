@@ -8,5 +8,5 @@ import * as validators from './auth.validation.js';
 
 router.post('/signUp',validationFun(validators.signupSchema), asyncHandler(AuthController.signUp))
 router.post('/signIn',validationFun(validators.loginSchema), asyncHandler(AuthController.signIn))
-
+router.get('/confirmEmail/:token', AuthController.confirmEmail)
 export default router;
