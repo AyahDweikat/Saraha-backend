@@ -9,6 +9,10 @@ dotenv.config()
 const initApp = (app,express)=>{
     connectDB()
     app.use(express.json())
+    app.get('/',(req, res)=>{
+        return res.status(200).json({message:"success connecting!"})
+    })
+
     app.use('/auth', AuthRouter)
     app.use('/auth', AuthRouter)
     app.use('/user', UserRouter)

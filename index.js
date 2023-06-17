@@ -1,6 +1,5 @@
 import express from 'express';
 import initApp from './src/app.router.js';
-import { sendEmail } from './src/services/sendEmail.js';
 const app = express();
 const PORT = process.env.PORT;
 
